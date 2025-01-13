@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    Hello Index Html
+  </head>
+  <body>
+    Index file
     <div class="container">Box</div>
+    <button onclick="navigateToHello()">Go to hello</button>
+    <button onclick="navigateToHome()">Go to home</button>
+    <script>
+      function navigateToHello() {
+        window.location.href = "/pages/hello.html";
+      }
+      function navigateToHome() {
+        window.location.href = "./home.html";
+      }
+    </script>
     <script type="module" src="main.js"></script>
-</body>
+  </body>
 </html>
