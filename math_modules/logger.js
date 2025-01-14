@@ -1,5 +1,6 @@
 import { add } from "./math.js";
 
+console.log("from logger"); 
 export function logger(message) {
   console.log(`[Logger]: ${message}`);
 }
