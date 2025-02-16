@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   calculateAndLog: () => (/* binding */ calculateAndLog)\n/* harmony export */ });\n/* harmony import */ var _math_modules_logger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math_modules/logger.js */ \"./math_modules/logger.js\");\n/* harmony import */ var _math_modules_math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./math_modules/math.js */ \"./math_modules/math.js\");\n\n\n\nconsole.log(\"hmm\", _.isEqual(2, 90));\nfunction calculateAndLog(a, b) {\n  const sum = (0,_math_modules_math_js__WEBPACK_IMPORTED_MODULE_1__.add)(a, b);\n  const difference = (0,_math_modules_math_js__WEBPACK_IMPORTED_MODULE_1__.subtract)(a, b);\n  (0,_math_modules_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger)(`From calucalator Sum: ${sum}, Difference: ${difference}`);\n  (0,_math_modules_logger_js__WEBPACK_IMPORTED_MODULE_0__.logSum)(a, b);\n}\n\n//# sourceURL=webpack://bundling/./calculator.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   calculateAndLog: () => (/* binding */ calculateAndLog)\n/* harmony export */ });\n/* harmony import */ var _src_math_modules_logger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/math_modules/logger.js */ \"./src/math_modules/logger.js\");\n/* harmony import */ var _src_math_modules_math_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/math_modules/math.js */ \"./src/math_modules/math.js\");\n\n\n\nconsole.log(\"hmm\", _.isEqual(2, 90));\nfunction calculateAndLog(a, b) {\n  const sum = (0,_src_math_modules_math_js__WEBPACK_IMPORTED_MODULE_1__.add)(a, b);\n  const difference = (0,_src_math_modules_math_js__WEBPACK_IMPORTED_MODULE_1__.subtract)(a, b);\n  (0,_src_math_modules_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger)(`From calucalator Sum: ${sum}, Difference: ${difference}`);\n  (0,_src_math_modules_logger_js__WEBPACK_IMPORTED_MODULE_0__.logSum)(a, b);\n}\n\n//# sourceURL=webpack://bundling/./calculator.js?");
 
 /***/ }),
 
@@ -27,29 +27,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _calculator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calculator.js */ \"./calculator.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ \"./style.css\");\n\n\n\n\nconsole.log('main file')\n\n;(0,_calculator_js__WEBPACK_IMPORTED_MODULE_0__.calculateAndLog)(5, 3);\n\nconsole.log(lodash__WEBPACK_IMPORTED_MODULE_1___default().isEmpty({}),lodash__WEBPACK_IMPORTED_MODULE_1___default().isEqual(2,2));\n\n//# sourceURL=webpack://bundling/./main.js?");
-
-/***/ }),
-
-/***/ "./math_modules/logger.js":
-/*!********************************!*\
-  !*** ./math_modules/logger.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   logSum: () => (/* binding */ logSum),\n/* harmony export */   logger: () => (/* binding */ logger)\n/* harmony export */ });\n/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math.js */ \"./math_modules/math.js\");\n\n\nconsole.log(\"from logger\"); \nfunction logger(message) {\n  console.log(`[Logger]: ${message}`);\n}\n\nfunction logSum(a, b) {\n  console.log(\"from logsum\", a, b);\n  const res = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__.add)(a, b);\n  logger(`\"Sum: ${res}\"`);\n}\n\n\n//# sourceURL=webpack://bundling/./math_modules/logger.js?");
-
-/***/ }),
-
-/***/ "./math_modules/math.js":
-/*!******************************!*\
-  !*** ./math_modules/math.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   add: () => (/* binding */ add),\n/* harmony export */   subtract: () => (/* binding */ subtract)\n/* harmony export */ });\n/* harmony import */ var _logger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logger.js */ \"./math_modules/logger.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nconsole.log(\"okkk\",lodash__WEBPACK_IMPORTED_MODULE_1___default().isNil(2))\n\nfunction add(a, b) {\n\n  ;(0,_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger)(`Adding ${a} and ${b}`);\n  return a + b;\n}\n\nfunction subtract(a, b) {\n  (0,_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger)(`Subtracting ${a} and ${b}`);\n  return a - b;\n}\n\n\n\n\n//# sourceURL=webpack://bundling/./math_modules/math.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _calculator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calculator.js */ \"./calculator.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ \"./style.css\");\n\n\n\n\n(0,_calculator_js__WEBPACK_IMPORTED_MODULE_0__.calculateAndLog)(5, 3);\nconsole.log('hii')\nconsole.log(lodash__WEBPACK_IMPORTED_MODULE_1___default().isEmpty({}),lodash__WEBPACK_IMPORTED_MODULE_1___default().isEqual(2,2));\n\n//# sourceURL=webpack://bundling/./main.js?");
 
 /***/ }),
 
@@ -170,6 +148,28 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 
 "use strict";
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://bundling/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
+
+/***/ }),
+
+/***/ "./src/math_modules/logger.js":
+/*!************************************!*\
+  !*** ./src/math_modules/logger.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   logSum: () => (/* binding */ logSum),\n/* harmony export */   logger: () => (/* binding */ logger)\n/* harmony export */ });\n/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math.js */ \"./src/math_modules/math.js\");\n\n\nconsole.log(\"from logger\"); \nfunction logger(message) {\n  console.log(`[Logger]: ${message}`);\n}\n\nfunction logSum(a, b) {\n  console.log(\"from logsum\", a, b);\n  const res = (0,_math_js__WEBPACK_IMPORTED_MODULE_0__.add)(a, b);\n  logger(`\"Sum: ${res}\"`);\n}\n\n\n//# sourceURL=webpack://bundling/./src/math_modules/logger.js?");
+
+/***/ }),
+
+/***/ "./src/math_modules/math.js":
+/*!**********************************!*\
+  !*** ./src/math_modules/math.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   add: () => (/* binding */ add),\n/* harmony export */   subtract: () => (/* binding */ subtract)\n/* harmony export */ });\n/* harmony import */ var _logger_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logger.js */ \"./src/math_modules/logger.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nconsole.log(\"okkk\",lodash__WEBPACK_IMPORTED_MODULE_1___default().isNil(2))\n\nfunction add(a, b) {\n\n  ;(0,_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger)(`Adding ${a} and ${b}`);\n  return a + b;\n}\n\nfunction subtract(a, b) {\n  (0,_logger_js__WEBPACK_IMPORTED_MODULE_0__.logger)(`Subtracting ${a} and ${b}`);\n  return a - b;\n}\n\n\n\n\n//# sourceURL=webpack://bundling/./src/math_modules/math.js?");
 
 /***/ })
 
