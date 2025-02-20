@@ -20,14 +20,24 @@ module.exports = {
     open: true, // Automatically open the browser
     hot: true, // Enable hot module replacement (HMR)
   },
+
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html", // Use your own HTML file
-      title: "Merchant Entries",
-    }),
+      template: "./index.html",
+    })
   ],
+  resolve: {
+    extensions: [".js", ".jsx"], // Allow importing without file extensions
+  },
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/, // Apply Babel on JS and JSX files
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],

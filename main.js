@@ -1,7 +1,13 @@
-import { calculateAndLog } from "./calculator.js";
-import _ from "lodash";
-import './style.css';
+import { StrictMode } from "react";
+import React from "react";
+import App from "./src/App";
+import { createRoot } from "react-dom/client";
 
-calculateAndLog(5, 3);
-console.log('hii')
-console.log(_.isEmpty({}),_.isEqual(2,2));
+const root = document.getElementById("root");
+if (!root) throw new Error("Root element not found");
+
+createRoot(root).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
